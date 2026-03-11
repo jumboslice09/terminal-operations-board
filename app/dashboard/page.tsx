@@ -70,10 +70,52 @@ export default function Dashboard() {
               }}
             >
               {day}
-            </div>
-          ))}
-        </div>
-      </div>
-    </main>
-  );
+              <div
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(7,1fr)",
+    gap: 6,
+    marginTop: 10,
+  }}
+>
+  {["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map((day)=>(
+    <div
+      key={day}
+      style={{
+        background:"#dbe7ff",
+        padding:10,
+        borderRadius:6,
+        textAlign:"center",
+        fontSize:12
+      }}
+    >
+      {day}
+    </div>
+  ))}
+</div>
+
+</div>
+
+<a href="/location">
+  <button
+    style={{
+      width: "100%",
+      padding: 16,
+      borderRadius: 10,
+      background: "#2563eb",
+      color: "white",
+      fontWeight: "bold",
+      fontSize: 16,
+      border: "none",
+      marginTop: 20
+    }}
+  >
+    View Station Location
+  </button>
+</a>
+
+</main>
+);
 }
+
+
