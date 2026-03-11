@@ -1,13 +1,17 @@
+import "./globals.css";
+
+export const metadata = {
+  title: "Terminal Operations Board",
+};
+
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html>
-      <body style={{fontFamily:"Arial"}}>
-        {children}
-      </body>
+    <html lang="en">
+      <body>{children}</body>
     </html>
-  )
+  );
 }
