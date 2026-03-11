@@ -59,7 +59,9 @@ export default function Home() {
             Forgot Password?
           </div>
 
-          <button style={loginButtonStyle}>Log In</button>
+          <a href="/dashboard">
+<button style={loginButtonStyle}>Log In</button>
+</a>
 
           <button style={socialButtonStyle}>
             <span style={socialIconStyle}>G</span>
