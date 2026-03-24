@@ -123,9 +123,7 @@ export default function MessagesPage() {
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-            <a href="/dashboard" style={{ textDecoration: "none" }}>
               <button style={navButtonStyle}>Dashboard</button>
-            </a>
 
             <a href="/location" style={{ textDecoration: "none" }}>
               <button style={navButtonStyle}>Location</button>
