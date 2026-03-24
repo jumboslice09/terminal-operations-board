@@ -135,12 +135,13 @@ export default function Dashboard() {
             Clock Out
           </button>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-            <button style={secondaryButtonStyle}>Messages</button>
-            <a href="/messages" style={{ textDecoration: "none" }}>
-              <button style={secondaryButtonStyle}>Messages</button>
-            </a>
-          </div>
+          <div style={{ display: "grid", gap: 12 }}>
+  <a href="/messages" style={{ textDecoration: "none" }}>
+    <button style={secondaryButtonStyle}>Messages</button>
+  </a>
+
+  <button style={secondaryButtonStyle}>Start Break</button>
+        </div>
         </div>
 
         <div style={cardStyle}>
