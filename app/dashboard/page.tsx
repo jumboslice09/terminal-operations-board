@@ -136,7 +136,7 @@ export default function Dashboard() {
           </button>
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-            <button style={secondaryButtonStyle}>Start Break</button>
+            <button style={secondaryButtonStyle}>Messages</button>
             <a href="/messages" style={{ textDecoration: "none" }}>
               <button style={secondaryButtonStyle}>Messages</button>
             </a>
