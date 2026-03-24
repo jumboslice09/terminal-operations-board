@@ -8,12 +8,7 @@ export default function Location() {
         padding: 20,
       }}
     >
-      <div
-        style={{
-          maxWidth: 420,
-          margin: "0 auto",
-        }}
-      >
+      <div style={{ maxWidth: 420, margin: "0 auto" }}>
         <div
           style={{
             background: "linear-gradient(180deg, #0d5bd7 0%, #0a4fc4 100%)",
@@ -34,15 +29,7 @@ export default function Location() {
           <div style={{ fontSize: 14, opacity: 0.9 }}>Mobile, AL</div>
         </div>
 
-        <div
-          style={{
-            background: "white",
-            borderRadius: 18,
-            padding: 18,
-            boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
-            marginBottom: 18,
-          }}
-        >
+        <div style={cardStyle}>
           <div style={{ fontSize: 22, fontWeight: 800, marginBottom: 14 }}>
             Shift Details
           </div>
@@ -68,15 +55,7 @@ export default function Location() {
           </div>
         </div>
 
-        <div
-          style={{
-            background: "white",
-            borderRadius: 18,
-            padding: 18,
-            boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
-            marginBottom: 18,
-          }}
-        >
+        <div style={cardStyle}>
           <div style={{ fontSize: 22, fontWeight: 800, marginBottom: 14 }}>
             Map View
           </div>
@@ -100,15 +79,7 @@ export default function Location() {
           </div>
         </div>
 
-        <div
-          style={{
-            background: "white",
-            borderRadius: 18,
-            padding: 18,
-            boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
-            marginBottom: 18,
-          }}
-        >
+        <div style={cardStyle}>
           <div style={{ fontSize: 22, fontWeight: 800, marginBottom: 14 }}>
             Supervisor Notes
           </div>
@@ -122,13 +93,7 @@ export default function Location() {
           </div>
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: 12,
-          }}
-        >
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
           <a href="/dashboard" style={{ textDecoration: "none" }}>
             <button style={secondaryButtonStyle}>Back to Dashboard</button>
           </a>
@@ -150,6 +115,14 @@ export default function Location() {
     </main>
   );
 }
+
+const cardStyle: React.CSSProperties = {
+  background: "white",
+  borderRadius: 18,
+  padding: 18,
+  boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+  marginBottom: 18,
+};
 
 const infoRowStyle: React.CSSProperties = {
   background: "#f8fafc",
