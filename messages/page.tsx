@@ -121,15 +121,22 @@ export default function MessagesPage() {
           <div style={{ fontSize: 22, fontWeight: 800, marginBottom: 14 }}>
             Quick Actions
           </div>
+<div
+  style={{
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    gap: 12,
+    marginTop: 10,
+  }}
+>
+  <a href="/messages" style={{ textDecoration: "none" }}>
+    <button style={navButtonStyle}>Messages</button>
+  </a>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-              <button style={navButtonStyle}>Dashboard</button>
-
-            <a href="/location" style={{ textDecoration: "none" }}>
-              <button style={navButtonStyle}>Location</button>
-            </a>
-          </div>
-        </div>
+  <a href="/location" style={{ textDecoration: "none" }}>
+    <button style={navButtonStyle}>Location</button>
+  </a>
+</div>
       </div>
     </main>
   );
