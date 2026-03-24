@@ -1,141 +1,321 @@
-export default function Home() {
+export default function Dashboard() {
+  const weekDays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
   return (
     <main
       style={{
         minHeight: "100vh",
-        margin: 0,
         fontFamily: "Arial, sans-serif",
-        background: "linear-gradient(180deg, #0d5bd7 0%, #0a4fc4 100%)",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        background: "#f3f6fb",
         padding: 20,
       }}
     >
       <div
         style={{
-          width: "100%",
-          maxWidth: 390,
-          background: "transparent",
-          borderRadius: 28,
-          padding: "28px 24px 32px",
-          color: "white",
+          maxWidth: 420,
+          margin: "0 auto",
         }}
       >
-        <div style={{ display: "flex", justifyContent: "center", marginBottom: 26 }}>
+        <div
+          style={{
+            background: "linear-gradient(180deg, #0d5bd7 0%, #0a4fc4 100%)",
+            borderRadius: 22,
+            padding: 20,
+            color: "white",
+            boxShadow: "0 8px 24px rgba(13,91,215,0.22)",
+            marginBottom: 18,
+          }}
+        >
           <div
             style={{
-              width: 82,
-              height: 82,
-              borderRadius: "50%",
-              background: "white",
               display: "flex",
+              justifyContent: "space-between",
               alignItems: "center",
-              justifyContent: "center",
-              boxShadow: "0 8px 20px rgba(0,0,0,0.18)",
-              fontSize: 34,
-              color: "#0d5bd7",
-              fontWeight: 700,
+              marginBottom: 12,
             }}
           >
-            i
+            <div>
+              <div style={{ fontSize: 14, opacity: 0.9 }}>Good Morning</div>
+              <div style={{ fontSize: 28, fontWeight: 800 }}>John</div>
+            </div>
+
+            <div
+              style={{
+                width: 50,
+                height: 50,
+                borderRadius: "50%",
+                background: "rgba(255,255,255,0.18)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontWeight: 700,
+                fontSize: 18,
+              }}
+            >
+              JB
+            </div>
+          </div>
+
+          <div
+            style={{
+              background: "rgba(255,255,255,0.14)",
+              borderRadius: 14,
+              padding: 14,
+            }}
+          >
+            <div style={{ fontSize: 13, opacity: 0.9, marginBottom: 4 }}>
+              Today’s Schedule
+            </div>
+            <div style={{ fontSize: 24, fontWeight: 800 }}>8:00 AM - 4:00 PM</div>
+            <div style={{ marginTop: 8, fontSize: 15 }}>Alabama Steel Terminal</div>
+            <div style={{ fontSize: 14, opacity: 0.9 }}>Mobile, AL</div>
           </div>
         </div>
 
-        <div style={{ display: "grid", gap: 14 }}>
-          <input
-            type="email"
-            placeholder="Email"
-            style={inputStyle}
-          />
-
-          <input
-            type="password"
-            placeholder="Password"
-            style={inputStyle}
-          />
-
-          <div style={{ textAlign: "right", fontSize: 13, opacity: 0.95, marginTop: -4 }}>
-            Forgot Password?
-          </div>
-
-          <a href="/dashboard">
-<button style={loginButtonStyle}>Log In</button>
-</a>
-
-          <button style={socialButtonStyle}>
-            <span style={socialIconStyle}>G</span>
-            Sign in with Google
-          </button>
-
-          <button
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: 12,
+            marginBottom: 18,
+          }}
+        >
+          <div
             style={{
-              ...socialButtonStyle,
-              background: "#111",
-              color: "white",
-              border: "none",
+              background: "white",
+              borderRadius: 18,
+              padding: 16,
+              boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
             }}
           >
-            <span style={{ ...socialIconStyle, background: "transparent", color: "white" }}>
-              
-            </span>
-            Sign in with Apple
+            <div style={{ fontSize: 13, color: "#666", marginBottom: 8 }}>Status</div>
+            <div style={{ fontSize: 22, fontWeight: 800, color: "#1e8e3e" }}>Clocked In</div>
+          </div>
+
+          <div
+            style={{
+              background: "white",
+              borderRadius: 18,
+              padding: 16,
+              boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+            }}
+          >
+            <div style={{ fontSize: 13, color: "#666", marginBottom: 8 }}>Today’s Station</div>
+            <div style={{ fontSize: 22, fontWeight: 800, color: "#0d5bd7" }}>Warehouse</div>
+          </div>
+        </div>
+
+        <div
+          style={{
+            background: "white",
+            borderRadius: 18,
+            padding: 18,
+            boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+            marginBottom: 18,
+          }}
+        >
+          <div style={{ fontSize: 22, fontWeight: 800, marginBottom: 12 }}>
+            Today’s Assignment
+          </div>
+
+          <div
+            style={{
+              background: "#f7f9fc",
+              borderRadius: 14,
+              padding: 14,
+              border: "1px solid #e5ebf5",
+              marginBottom: 12,
+            }}
+          >
+            <div style={{ fontSize: 14, color: "#6b7280", marginBottom: 6 }}>Primary Area</div>
+            <div style={{ fontSize: 22, fontWeight: 800 }}>Warehouse</div>
+          </div>
+
+          <div
+            style={{
+              display: "grid",
+              gap: 10,
+              marginBottom: 12,
+            }}
+          >
+            <div style={infoRowStyle}>
+              <span style={labelStyle}>Subgroup</span>
+              <span style={valueStyle}>Crane Operators</span>
+            </div>
+
+            <div style={infoRowStyle}>
+              <span style={labelStyle}>Work Station</span>
+              <span style={valueStyle}>Crane 12</span>
+            </div>
+
+            <div style={infoRowStyle}>
+              <span style={labelStyle}>Supervisor Note</span>
+              <span style={valueStyle}>Report to Warehouse first</span>
+            </div>
+          </div>
+
+          <a href="/location" style={{ textDecoration: "none" }}>
+            <button
+              style={{
+                width: "100%",
+                padding: 15,
+                borderRadius: 12,
+                background: "#2563eb",
+                color: "white",
+                fontWeight: 700,
+                fontSize: 16,
+                border: "none",
+              }}
+            >
+              View Station Location
+            </button>
+          </a>
+        </div>
+
+        <div
+          style={{
+            display: "grid",
+            gap: 12,
+            marginBottom: 18,
+          }}
+        >
+          <button
+            style={{
+              width: "100%",
+              padding: 16,
+              borderRadius: 14,
+              background: "#e53935",
+              color: "white",
+              fontWeight: 800,
+              fontSize: 18,
+              border: "none",
+              boxShadow: "0 8px 18px rgba(229,57,53,0.18)",
+            }}
+          >
+            Clock Out
           </button>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: 12,
+            }}
+          >
+            <button style={secondaryButtonStyle}>Start Break</button>
+            <button style={secondaryButtonStyle}>Messages</button>
+          </div>
+        </div>
+
+        <div
+          style={{
+            background: "white",
+            borderRadius: 18,
+            padding: 18,
+            boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+            marginBottom: 18,
+          }}
+        >
+          <div style={{ fontSize: 22, fontWeight: 800, marginBottom: 14 }}>
+            Weekly Overview
+          </div>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(7,1fr)",
+              gap: 8,
+            }}
+          >
+            {weekDays.map((day, index) => (
+              <div
+                key={day}
+                style={{
+                  background: index === 2 ? "#0d5bd7" : "#dbe7ff",
+                  color: index === 2 ? "white" : "#1f2937",
+                  padding: "12px 6px",
+                  borderRadius: 10,
+                  textAlign: "center",
+                  fontSize: 12,
+                  fontWeight: 700,
+                }}
+              >
+                {day}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div
+          style={{
+            background: "white",
+            borderRadius: 18,
+            padding: 18,
+            boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+          }}
+        >
+          <div style={{ fontSize: 22, fontWeight: 800, marginBottom: 14 }}>
+            Quick Links
+          </div>
+
+          <div style={{ display: "grid", gap: 10 }}>
+            <a href="/location" style={quickLinkStyle}>
+              <span>Station Location</span>
+              <span>›</span>
+            </a>
+
+            <a href="/manager" style={quickLinkStyle}>
+              <span>Manager Board</span>
+              <span>›</span>
+            </a>
+          </div>
         </div>
       </div>
     </main>
   );
 }
 
-const inputStyle: React.CSSProperties = {
-  width: "100%",
-  padding: "16px 14px",
-  borderRadius: 10,
-  border: "none",
-  outline: "none",
-  fontSize: 16,
-  background: "white",
-  color: "#222",
-  boxSizing: "border-box",
-};
-
-const loginButtonStyle: React.CSSProperties = {
-  width: "100%",
-  padding: "15px 14px",
-  borderRadius: 10,
-  border: "1px solid rgba(255,255,255,0.22)",
-  background: "linear-gradient(180deg, #4aa3ff 0%, #1e73ea 100%)",
-  color: "white",
-  fontSize: 18,
-  fontWeight: 700,
-  cursor: "pointer",
-  boxShadow: "0 8px 18px rgba(0,0,0,0.18)",
-};
-
-const socialButtonStyle: React.CSSProperties = {
-  width: "100%",
-  padding: "14px 16px",
-  borderRadius: 999,
-  border: "none",
-  background: "white",
-  color: "#222",
-  fontSize: 15,
-  fontWeight: 600,
-  cursor: "pointer",
+const infoRowStyle: React.CSSProperties = {
+  background: "#f8fafc",
+  borderRadius: 12,
+  padding: "12px 14px",
+  border: "1px solid #e5ebf5",
   display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  gap: 10,
+  flexDirection: "column",
+  gap: 4,
 };
 
-const socialIconStyle: React.CSSProperties = {
-  width: 22,
-  height: 22,
-  borderRadius: "50%",
-  display: "inline-flex",
+const labelStyle: React.CSSProperties = {
+  fontSize: 13,
+  color: "#6b7280",
+};
+
+const valueStyle: React.CSSProperties = {
+  fontSize: 16,
+  fontWeight: 700,
+  color: "#111827",
+};
+
+const secondaryButtonStyle: React.CSSProperties = {
+  width: "100%",
+  padding: 14,
+  borderRadius: 12,
+  background: "white",
+  color: "#1f2937",
+  fontWeight: 700,
+  fontSize: 15,
+  border: "1px solid #d8e2f0",
+};
+
+const quickLinkStyle: React.CSSProperties = {
+  display: "flex",
+  justifyContent: "space-between",
   alignItems: "center",
-  justifyContent: "center",
-  background: "#f2f2f2",
-  fontSize: 14,
+  textDecoration: "none",
+  color: "#111827",
+  background: "#f8fafc",
+  border: "1px solid #e5ebf5",
+  borderRadius: 12,
+  padding: "14px 16px",
   fontWeight: 700,
 };
