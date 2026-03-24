@@ -38,7 +38,6 @@ export default function Home() {
               fontWeight: 700,
             }}
           >
-            i
           </div>
         </div>
 
