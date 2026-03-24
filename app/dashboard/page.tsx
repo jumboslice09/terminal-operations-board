@@ -135,13 +135,13 @@ export default function Dashboard() {
             Clock Out
           </button>
 
-          <div style={{ display: "grid", gap: 12 }}>
-  <a href="/messages" style={{ textDecoration: "none" }}>
-    <button style={secondaryButtonStyle}>Messages</button>
-  </a>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+            <button style={secondaryButtonStyle}>Start Break</button>
 
-  <button style={secondaryButtonStyle}>Start Break</button>
-        </div>
+            <a href="/messages" style={{ textDecoration: "none" }}>
+              <button style={secondaryButtonStyle}>Messages</button>
+            </a>
+          </div>
         </div>
 
         <div style={cardStyle}>
@@ -172,6 +172,22 @@ export default function Dashboard() {
                 {day}
               </div>
             ))}
+          </div>
+        </div>
+
+        <div style={cardStyle}>
+          <div style={{ fontSize: 22, fontWeight: 800, marginBottom: 14 }}>
+            Quick Actions
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+            <a href="/messages" style={{ textDecoration: "none" }}>
+              <button style={navButtonStyle}>Messages</button>
+            </a>
+
+            <a href="/location" style={{ textDecoration: "none" }}>
+              <button style={navButtonStyle}>Location</button>
+            </a>
           </div>
         </div>
       </div>
@@ -235,6 +251,17 @@ const primaryButtonStyle: React.CSSProperties = {
 };
 
 const secondaryButtonStyle: React.CSSProperties = {
+  width: "100%",
+  padding: 14,
+  borderRadius: 12,
+  background: "white",
+  color: "#1f2937",
+  fontWeight: 700,
+  fontSize: 15,
+  border: "1px solid #d8e2f0",
+};
+
+const navButtonStyle: React.CSSProperties = {
   width: "100%",
   padding: 14,
   borderRadius: 12,
